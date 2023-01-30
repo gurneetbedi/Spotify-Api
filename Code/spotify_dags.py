@@ -19,7 +19,7 @@ default_args = {
 dag = DAG(
     'spotify_dag',
     default_args=default_args,
-    description='Our first DAG with ETL process!',
+    description='Spotify DAG ETL process!',
     schedule_interval=timedelta(days=1),
 )
 
