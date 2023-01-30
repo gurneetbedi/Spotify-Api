@@ -7,7 +7,6 @@ import datetime
 import sqlite3
 import pandas as pd
 from code_taken import TOKEN, base_64,  refresh_token
-# from check_data import check_if_valid_data
 
 
 class Refresh:
@@ -31,7 +30,7 @@ class Refresh:
 a = Refresh()
 new_token = a.refresh()
 
-
+# Transform
 def check_if_valid_data(df: pd.DataFrame) -> bool:
     # Check if DF is empty
     if df.empty:
@@ -60,6 +59,7 @@ def check_if_valid_data(df: pd.DataFrame) -> bool:
 
 
 def run_spotify_etl():
+#     Extract
     database_location = 'sqlite:///my_played_tracks.sqlite'
     user_id = 'aphcm8592zjnjfo1k965kd1iz'
     token = new_token
